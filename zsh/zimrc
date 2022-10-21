@@ -1,0 +1,25 @@
+zmodule environment
+zmodule git
+zmodule input
+zmodule archive
+zmodule ssh
+zmodule termtitle
+zmodule utility
+zmodule completion
+zmodule git-info
+# zmodule eriner
+zmodule gitster
+# zmodule magicmace
+# zmodule s1ck94
+# zmodule sorin
+# zmodule steeef
+zmodule pacman
+zmodule zsh-users/zsh-completions
+zmodule Aloxaf/fzf-tab
+zmodule zsh-users/zsh-autosuggestions
+zmodule zsh-users/zsh-history-substring-search
+zmodule zdharma/fast-syntax-highlighting
+zmodule supercrabtree/k
+zmodule hlissner/zsh-autopair
+zmodule pabloariasal/zfm
+zmodule agkozak/zsh-z

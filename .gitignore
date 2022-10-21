@@ -1,0 +1,14 @@
+*.swp
+.DS_Store
+view/
+plugged/
+sessions/
+.netrwhist
+.vim-bookmarks
+testmd-snippets.md
+
+# ignore ALL .log files
+*.log
+
+# ignore ALL files in ANY directory named temp
+tmp/
