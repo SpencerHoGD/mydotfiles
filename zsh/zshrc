@@ -162,6 +162,8 @@ alias dkcup='sudo docker compose up'
 alias dkcdo='sudo docker compose down'
 alias dkcps='sudo docker compose ps'
 
+#test
+
 
 
 
