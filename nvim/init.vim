@@ -720,7 +720,6 @@ let g:instant_markdown_autoscroll = 1
 " let g:instant_markdown_python = 1
 
 
-
 " ===
 " === vim-markdown-toc
 " ===
@@ -729,6 +728,19 @@ let g:instant_markdown_autoscroll = 1
 let g:vmt_cycle_list_item_markers = 1
 let g:vmt_fence_text = 'TOC'
 let g:vmt_fence_closing_text = '/TOC'
+
+
+" ===hxm
+" === the silver searcher
+" ===
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+
+
+
+
+
+
 
 
 " ===================== End of Plugin Settings =====================
