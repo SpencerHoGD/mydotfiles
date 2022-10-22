@@ -158,9 +158,13 @@ alias dkrm='sudo docker rm' # remove container
 alias dkvol='sudo docker volume'
 
 # docker compose
-alias dkcup='sudo docker compose up'
-alias dkcdo='sudo docker compose down'
-alias dkcps='sudo docker compose ps'
+alias dkc='sudo docker compose'
+alias dkcb='sudo docker compose --build'
+alias dkcu='sudo docker compose up -d'
+alias dkcd='sudo docker compose down'
+alias dkcp='sudo docker compose ps'
+alias dkcr='sudo docker compose run'
+alias dkcs='sudo docker compose stop'
 
 
 
