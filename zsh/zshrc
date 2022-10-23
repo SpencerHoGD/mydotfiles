@@ -1,22 +1,13 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-source $ZSH/oh-my-zsh.sh
+# # Get the aliases and functions
+# if [ -f ~/.aliases ]; then
+#   . ~/.aliases
+# fi
 
-# Insecure completion-dependent directories detected:
-ZSH_DISABLE_COMPFIX="false"
-
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/nvim-linux64/bin:$PATH
-
-# Path to your oh-my-zsh installation.
 # export EDITOR="nvim"
 export EDITOR=nvim
-
-# Path to pip
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -25,7 +16,6 @@ export EDITOR=nvim
 
 # ZSH_THEME="clean"
 ZSH_THEME="jonathan"
-
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -47,7 +37,7 @@ ZSH_THEME="jonathan"
 # DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -64,11 +54,6 @@ ZSH_THEME="jonathan"
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
 
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # You can set one of the optional three formats:
@@ -76,24 +61,6 @@ ZSH_THEME="jonathan"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-    aliases
-    ag
-    git
-    wd
-    web-search
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-)
 
 # ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 
@@ -114,13 +81,13 @@ fi
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# To avoid ranger loading conf twice
+export RANGER_LOAD_DEFAULT_RC=false
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-
-# To avoid ranger loading conf twice
-export RANGER_LOAD_DEFAULT_RC=false
 
 alias S='source ~/.zshrc'
 alias ra='ranger'
@@ -135,7 +102,9 @@ alias nvrc='nvim ~/github/mydotfiles/nvim/init.vim'
 alias c='clear'
 alias a='~'
 alias e='exit'
-alias upd='sudo pacman -Syu'
+
+alias upd='sudo pacman -Syyu'
+alias pac='sudo pacman'
 alias ins='sudo pacman -S'
 
 # docker
@@ -153,7 +122,7 @@ alias dkimg='sudo docker images'
 alias dkrmi='sudo docker rmi'
 
 alias dkrm='sudo docker rm' # remove container
-# # or dksto $(dkpq)  # delete all container
+# or dksto $(dkpq)  # delete all container
 
 alias dkvol='sudo docker volume'
 
@@ -166,9 +135,27 @@ alias dkcp='sudo docker compose ps'
 alias dkcr='sudo docker compose run'
 alias dkcs='sudo docker compose stop'
 
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+    aliases
+    ag
+    git
+    wd
+    #web-search
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
 
-
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
+source $ZSH/oh-my-zsh.sh
 
 
 
