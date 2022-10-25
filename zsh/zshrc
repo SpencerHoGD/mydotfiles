@@ -102,6 +102,7 @@ alias nvrc='nvim ~/github/mydotfiles/nvim/init.vim'
 alias c='clear'
 alias a='~'
 alias e='exit'
+alias today='date +"%A, %B %-d, %Y"'
 
 alias upd='sudo pacman -Syyu'
 alias pac='sudo pacman'
@@ -152,6 +153,8 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
+
+export LFS=/mnt/lfs
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
