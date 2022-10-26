@@ -136,6 +136,12 @@ alias dkcp='sudo docker compose ps'
 alias dkcr='sudo docker compose run'
 alias dkcs='sudo docker compose stop'
 
+# go env
+export GO111MODULE=on
+export GOPROXY=https://goproxy.cn
+export GOBIN=/usr/local/go/bin
+export GOTMPDIR=$HOME/tmp
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
