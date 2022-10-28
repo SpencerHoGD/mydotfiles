@@ -25,14 +25,14 @@ dns:
   ipv6: false
   enhanced-mode: fake-ip
   fake-ip-filter:
-    - "*.lan"
-    - "*.localdomain"
-    - "*.example"
-    - "*.invalid"
-    - "*.localhost"
-    - "*.test"
-    - "*.local"
-    - "*.home.arpa"
+    - '*.lan'
+    - '*.localdomain'
+    - '*.example'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
     - time.*.com
     - time.*.gov
     - time.*.edu.cn
@@ -52,31 +52,31 @@ dns:
     - ntp5.*.com
     - ntp6.*.com
     - ntp7.*.com
-    - "*.time.edu.cn"
-    - "*.ntp.org.cn"
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
     - +.pool.ntp.org
     - time1.cloud.tencent.com
     - music.163.com
-    - "*.music.163.com"
-    - "*.126.net"
+    - '*.music.163.com'
+    - '*.126.net'
     - musicapi.taihe.com
     - music.taihe.com
     - songsearch.kugou.com
     - trackercdn.kugou.com
-    - "*.kuwo.cn"
+    - '*.kuwo.cn'
     - api-jooxtt.sanook.com
     - api.joox.com
     - joox.com
     - y.qq.com
-    - "*.y.qq.com"
+    - '*.y.qq.com'
     - streamoc.music.tc.qq.com
     - mobileoc.music.tc.qq.com
     - isure.stream.qqmusic.qq.com
     - dl.stream.qqmusic.qq.com
     - aqqmusic.tc.qq.com
     - amobile.music.tc.qq.com
-    - "*.xiami.com"
-    - "*.music.migu.cn"
+    - '*.xiami.com'
+    - '*.music.migu.cn'
     - music.migu.cn
     - +.msftconnecttest.com
     - +.msftncsi.com
@@ -101,9 +101,9 @@ dns:
     - +.stun.*.*.*
     - +.stun.*.*.*.*
     - heartbeat.belkin.com
-    - "*.linksys.com"
-    - "*.linksyssmartwifi.com"
-    - "*.router.asus.com"
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - '*.router.asus.com'
     - mesu.apple.com
     - swscan.apple.com
     - swquery.apple.com
@@ -112,12 +112,12 @@ dns:
     - swdist.apple.com
     - lens.l.google.com
     - stun.l.google.com
-    - "*.square-enix.com"
-    - "*.finalfantasyxiv.com"
-    - "*.ffxiv.com"
-    - "*.ff14.sdo.com"
+    - '*.square-enix.com'
+    - '*.finalfantasyxiv.com'
+    - '*.ffxiv.com'
+    - '*.ff14.sdo.com'
     - ff.dorado.sdo.com
-    - "*.mcdn.bilivideo.cn"
+    - '*.mcdn.bilivideo.cn'
     - +.media.dssott.com
     - +.pvp.net
   nameserver:
@@ -172,7 +172,7 @@ dns:
 proxies:
   - alterId: 0
     cipher: auto
-    name: '美国la|cn-us'
+    name: 'us-la'
     network: ws
     port: 443
     server: test.yiyeguojiang.top
@@ -188,7 +188,7 @@ proxy-groups:
   - name: proxy
     type: select
     proxies:
-      - 美国la|cn-us
+      - us-la
 rules:
  - DOMAIN-SUFFIX,local,DIRECT
  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
