@@ -142,6 +142,10 @@ export GOPROXY=https://goproxy.cn
 export GOBIN=/usr/local/go/bin
 export GOTMPDIR=$HOME/tmp
 
+## xz
+# export XZ_DEFAULTS=--men-limit=1500MiB
+export XZ_DEFAULTS=--memlimit-compress=88%
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
