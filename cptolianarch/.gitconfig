@@ -1,0 +1,7 @@
+[user]
+	name = hxm_raspi_manjaro
+	email = hexiaomingvip@icloud.com
+[core]
+	editor = nvim
+[color]
+	ui = auto
