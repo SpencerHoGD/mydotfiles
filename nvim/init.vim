@@ -1,4 +1,3 @@
-
 " ===
 " === Auto load for first time uses
 " ===
@@ -7,9 +6,6 @@
 " 				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 " 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 " endif
-
-
-
 
 " ===
 " === Create a _machine_specific.vim file to adjust machine specific stuff, like python interpreter location
@@ -28,24 +24,26 @@
 ""endif
 
 
-" colorscheme default
-colorscheme darkblue
+colorscheme default
+" colorscheme darkblue
+
+set clipboard+=unnamedplus
 
 "copy from powervim
 
-" 快速移动到行首，行尾
+" move to the start and end of line.
 map <LEADER>1 ^
 map <LEADER>2 $
 noremap <LEADER>1 ^
 noremap <LEADER>2 $
-" 打开文件
+" edit file
 nmap <LEADER>e :e<Space>
-" 不关闭文件推出
+" move to background
 nmap <LEADER>z <C-Z>
-" 水平分隔
+" horizon split
 nmap <LEADER>s :Sex<CR>
-" 竖直分隔
-nmap <LEADER>v :Vex<CR>
+" vertical split?
+" nmap <LEADER>v :Vex<CR>
 " delete and append to file
 " nnoremap ff :. w>> ./EconomistList-knownWords.txt<CR>dd
 
@@ -143,9 +141,9 @@ set statusline=[%F]%y%r%m%*%=[Line:%l/%L,Column:%c][%p%%]    "状态栏绝对路
 
 
 "search
-set showmatch
-set hlsearch
-set incsearch
+" set showmatch
+" set hlsearch
+" set incsearch
 set ignorecase
 set infercase   "use with ignorecase for completion
 set smartcase
@@ -431,11 +429,11 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
-" comment one line with # 
-noremap <LEADER>m I#<SPACE><ESC>^j
-noremap <LEADER>n ^xxj
-" comment one line with 
-noremap <LEADER>v I"<SPACE><ESC>^j
+" comment one line with #
+noremap <LEADER>m I#<SPACE><ESC>^
+noremap <LEADER>n ^xx
+" comment one line with
+noremap <LEADER>v I"<SPACE><ESC>^
 
 
  " Compile function
@@ -484,20 +482,8 @@ noremap t :call CompileRunGcc()<CR>
 " ===
 " === Necessary Commands to Execute
 " ===
-"exec "nohlsearch"
+exec "nohlsearch"
 " let g:netrw_browsex_viewer= "chromium"
-
-
-" === hxm
-" === vim-plug automatic installation for nvim
-" ===
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
-if empty(glob(data_dir . '/autoload/plug.vim'))
-  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-
 
 " ===
 " === Install Plugins with Vim-Plug
@@ -505,203 +491,29 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
+" Plug 'tpope/vim-sensible'
 
 " Translation
 Plug 'voldikss/vim-translator'
 
-" Testing my own plugin
-" Plug 'theniceboy/vim-calc'
-
-" Pretty Dress
-" myselfmark Plug 'bling/vim-bufferline'
-" myselfmark Plug 'bpietravalle/vim-bolt'
-" myselfmark Plug 'theniceboy/vim-deus'
-
-"Plug 'arzg/vim-colors-xcode'
-
-" Status line
-" myselfmark Plug 'theniceboy/eleline.vim'
-
-" General Highlighter
-" myselfmark Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
-" myselfmark Plug 'RRethy/vim-illuminate'
-
 " File navigation
-"Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-"Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-" myselfmark Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
-" myselfmark Plug 'kevinhwang91/rnvimr'
-" myselfmark Plug 'airblade/vim-rooter'
-" myselfmark Plug 'pechorin/any-jump.vim'
-
-" Taglist
-" myselfmark Plug 'liuchengxu/vista.vim'
-
-" Debugger
-" Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-c --enable-python --enable-go'}
-
-" Auto Complete
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" myselfmark Plug 'wellle/tmux-complete.vim'
-
-" Snippets
-" Plug 'SirVer/ultisnips'
-" myselfmark Plug 'theniceboy/vim-snippets'
-
-" Undo Tree
-" myselfmark Plug 'mbbill/undotree'
-
-" Git
-" myselfmark Plug 'theniceboy/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
-" myselfmark Plug 'fszymanski/fzf-gitignore', { 'do': ':UpdateRemotePlugins' }
-"Plug 'mhinz/vim-signify'
-" myselfmark Plug 'airblade/vim-gitgutter'
-" myselfmark Plug 'cohama/agit.vim'
-
-" Autoformat
-" myselfmark Plug 'Chiel92/vim-autoformat'
-
-" Tex
-" Plug 'lervag/vimtex'
-
-" CSharp
-" myselfmark Plug 'OmniSharp/omnisharp-vim'
-" myselfmark Plug 'ctrlpvim/ctrlp.vim' , { 'for': ['cs', 'vim-plug'] } " omnisharp-vim dependency
-
-" HTML, CSS, JavaScript, Typescript, PHP, JSON, etc.
-" myselfmark Plug 'elzr/vim-json'
-" myselfmark Plug 'othree/html5.vim'
-" myselfmark Plug 'alvan/vim-closetag'
-" Plug 'hail2u/vim-css3-syntax' " , { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-" Plug 'spf13/PIV', { 'for' :['php', 'vim-plug'] }
-" Plug 'pangloss/vim-javascript', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-" myselfmark Plug 'yuezk/vim-js', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-" Plug 'MaxMEllon/vim-jsx-pretty', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-" Plug 'jelera/vim-javascript-syntax', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
-"Plug 'jaxbot/browserlink.vim'
-" myselfmark Plug 'HerringtonDarkholme/yats.vim'
 
 " Go
 " myselfmark Plug 'fatih/vim-go' , { 'for': ['go', 'vim-plug'], 'tag': '*' }
 " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Python
-" Plug 'tmhedberg/SimpylFold', { 'for' :['python', 'vim-plug'] }
 Plug 'Vimjas/vim-python-pep8-indent', { 'for' :['python', 'vim-plug'] }
-" myselfmark Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins', 'for' :['python', 'vim-plug'] }
-"Plug 'vim-scripts/indentpython.vim', { 'for' :['python', 'vim-plug'] }
-"Plug 'plytophogy/vim-virtualenv', { 'for' :['python', 'vim-plug'] }
-" myselfmark Plug 'tweekmonster/braceless.vim', { 'for' :['python', 'vim-plug'] }
-
-" Flutter
-" myselfmark Plug 'dart-lang/dart-vim-plugin'
-
-" Swift
-" myselfmark Plug 'keith/swift.vim'
-" myselfmark Plug 'arzg/vim-swift'
 
 " Markdown
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['text', 'markdown', 'vim-plug'] }
 Plug 'mzlogin/vim-markdown-toc', { 'for': ['gitignore', 'markdown', 'vim-plug'] }
-" Plug 'dkarter/bullets.vim'
-
-" Other filetypes
-" Plug 'jceb/vim-orgmode', {'for': ['vim-plug', 'org']}
-
-" Editor Enhancement
-"Plug 'Raimondi/delimitMate'
-" Plug 'jiangmiao/auto-pairs'
-" myselfmark Plug 'mg979/vim-visual-multi'
-" myselfmark Plug 'tomtom/tcomment_vim' " in <space>cn to comment a line
-" myselfmark Plug 'theniceboy/antovim' " gs to switch
-" myselfmark Plug 'tpope/vim-surround' " type yskw' to wrap the word with '' or type cs'` to change 'word' to `word`
-" myselfmark Plug 'gcmt/wildfire.vim' " in Visual mode, type k' to select all text in '', or type k) k] k} kp
-" myselfmark Plug 'junegunn/vim-after-object' " da= to delete what's after =
-" myselfmark Plug 'godlygeek/tabular' " ga, or :Tabularize <regex> to align
-" myselfmark Plug 'tpope/vim-capslock'	" Ctrl+L (insert) to toggle capslock
-" myselfmark Plug 'easymotion/vim-easymotion'
-" Plug 'Konfekt/FastFold'
-"Plug 'junegunn/vim-peekaboo'
-"Plug 'wellle/context.vim'
-" myselfmark Plug 'svermeulen/vim-subversive'
-" myselfmark Plug 'theniceboy/argtextobj.vim'
-" myselfmark Plug 'rhysd/clever-f.vim'
-" myselfmark Plug 'chrisbra/NrrwRgn'
-" myselfmark Plug 'AndrewRadev/splitjoin.vim'
-
-" For general writing
-" Plug 'junegunn/goyo.vim'
-"Plug 'reedes/vim-wordy'
-"Plug 'ron89/thesaurus_query.vim'
-
-" Bookmarks
-" Plug 'MattesGroeger/vim-bookmarks'
-
-" Find & Replace
-" myselfmark Plug 'brooth/far.vim', { 'on': ['F', 'Far', 'Fardo'] }
-
-" Documentation
-"Plug 'KabbAmine/zeavim.vim' " <LEADER>z to find doc
-
-" Mini Vim-APP
-"Plug 'jceb/vim-orgmode'
-"Plug 'mhinz/vim-startify'
-" myselfmark Plug 'skywind3000/asynctasks.vim'
-" myselfmark Plug 'skywind3000/asyncrun.vim'
-
-" Vim Applications
-" myselfmark Plug 'itchyny/calendar.vim'
-
-" Other visual enhancement
-" myselfmark Plug 'ryanoasis/vim-devicons'
-" myselfmark Plug 'luochen1990/rainbow'
-" myselfmark Plug 'mg979/vim-xtabline'
-" myselfmark Plug 'wincent/terminus'
-
-" Other useful utilities
-" myselfmark Plug 'lambdalisue/suda.vim' " do stuff like :sudowrite
-" Plug 'makerj/vim-pdf'
-"Plug 'xolox/vim-session'
-"Plug 'xolox/vim-misc' " vim-session dep
-
-" Dependencies
-" Plug 'MarcWeber/vim-addon-mw-utils'
-" Plug 'kana/vim-textobj-user'
-" Plug 'roxma/nvim-yarp'
-
 
 call plug#end()
 
-
-" ===
-" === Dress up my vim
-" ===
-" set termguicolors " enable true colors support
-"let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-"set background=dark
-"let ayucolor="mirage"
-"let g:oceanic_next_terminal_bold = 1
-"let g:oceanic_next_terminal_italic = 1
-"let g:one_allow_italics = 1
-
-"color dracula
-"color one
-" color deus
-"color gruvbox
-"let ayucolor="light"
-"color ayu
-"color xcodelighthc
-"set background=light
-"set cursorcolumn
-
-" hi NonText ctermfg=gray guifg=grey10
-"hi SpecialKey ctermfg=blue guifg=grey70
-
-
-" ===================== Start of Plugin Settings =====================
-
+" ================== Start of Plugin Settings =====================
 
 " ===
 " === vim-instant-markdown
@@ -717,7 +529,6 @@ let g:instant_markdown_autoscroll = 1
 " let g:instant_markdown_port = 8888
 " let g:instant_markdown_python = 1
 
-
 " ===
 " === vim-markdown-toc
 " ===
@@ -727,18 +538,33 @@ let g:vmt_cycle_list_item_markers = 1
 let g:vmt_fence_text = 'TOC'
 let g:vmt_fence_closing_text = '/TOC'
 
-
 " ===hxm
 " === the silver searcher
 " ===
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
+" ==================== End of Plugin Settings =====================
+
+" ===================== Dress up my vim ===========================
+set termguicolors " enable true colors support
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set background=dark
+let ayucolor="mirage"
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
+let g:one_allow_italics = 1
+
+" color dracula
+" color one
+" color deus
+" color gruvbox
+" let ayucolor="light"
+" color ayu
+" color xcodelighthc
+" set background=light
+" set cursorcolumn
+
+" hi NonText ctermfg=gray guifg=grey10
+" hi SpecialKey ctermfg=blue guifg=grey70
 
 
-
-
-
-
-
-
-" ===================== End of Plugin Settings =====================
