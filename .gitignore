@@ -6,6 +6,7 @@ sessions/
 .netrwhist
 .vim-bookmarks
 testmd-snippets.md
+clash/config.yaml
 
 # ignore ALL .log files
 *.log
