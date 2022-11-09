@@ -92,19 +92,34 @@ alias ra='ranger'
 alias lg='lazygit'
 alias neo='neofetch'
 alias v='nvim'
+alias sv='sudo nvim'
 alias neo='neofetch'
 alias sudo='sudo '
 alias X='chmod +x'
 alias rc='nvim ~/.zshrc'
-alias vrc='nvim ~/.init.vim'
+alias vrc='nvim ~/.config/nvim/init.vim'
 alias c='clear'
 alias a='~'
 alias e='exit'
 alias today='date +"%A, %B %-d, %Y"'
 
-alias upd='sudo pacman -Syyu'
+alias pau='sudo pacman -Syyu'
 alias pac='sudo pacman'
 alias ins='sudo pacman -S'
+alias par='sudo pacman -R'
+alias paq='sudo pacman -Q'
+
+alias yayi='yay -S'
+
+alias sys='sudo systemctl'
+alias syss='sudo systemctl status'
+alias sysg='sudo systemctl | grep'
+# alias sysl='sudo systemctl | less'
+alias sysa='sudo systemctl start'
+alias syso='sudo systemctl stop'
+alias syse='sudo systemctl enable'
+alias sysd='sudo systemctl disable'
+
 alias pyins='python -m pip install'
 
 # docker
@@ -134,6 +149,13 @@ alias dkcd='sudo docker compose down'
 alias dkcp='sudo docker compose ps'
 alias dkcr='sudo docker compose run'
 alias dkcs='sudo docker compose stop'
+
+alias maci='sudo make clean install'
+alias rbbb='sudo reboot'
+alias sttt='shutdown -h now'
+
+alias clm='my_cloud --cloud hxm@192.168.1.11'
+alias pins='python -m pip install '
 
 # go env
 export GO111MODULE=on
@@ -169,8 +191,7 @@ export LFS=/mnt/lfs
 # if [ -f ~/github/BigBagKbdTrixXKB/setxkb.sh ]; then
 #   ./github/BigBagKbdTrixXKB/setxkb.sh -a "4caw us us"
 # fi
-##-> DreymaR's SetXKB.sh: Activate layout
-setxkbmap -model 'pc104aw-zqu' -layout 'us(cmk_ed_us)' -option 'misc:extend,lv5:caps_switch_lock,grp:shifts_toggle,compose:menu,misc:cmk_curl_dh'
+##-> DreymaR's SetXKB.sh: Activate layout setxkbmap -model 'pc104aw-zqu' -layout 'us(cmk_ed_us)' -option 'misc:extend,lv5:caps_switch_lock,grp:shifts_toggle,compose:menu,misc:cmk_curl_dh'
 ##<- DreymaR's SetXKB.sh
 
 
