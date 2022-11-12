@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/.local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/Scripts:$PATH
 
 # # Get the aliases and functions
 # if [ -f ~/.aliases ]; then
@@ -122,7 +123,7 @@ alias syso='sudo systemctl stop'
 alias syse='sudo systemctl enable'
 alias sysd='sudo systemctl disable'
 
-alias pyins='python -m pip install'
+alias pipi='python -m pip install'
 
 # docker
 alias dk='sudo docker'
@@ -153,12 +154,12 @@ alias dkcp='sudo docker compose ps'
 alias dkcr='sudo docker compose run'
 alias dkcs='sudo docker compose stop'
 
-alias maci='sudo make clean install'
+alias mkci='sudo make clean install'
+alias ss='source'
 alias rbbb='sudo reboot'
 alias sttt='shutdown -h now'
 
 alias clm='my_cloud --cloud hxm@192.168.1.11'
-alias pins='python -m pip install '
 
 # go env
 export GO111MODULE=on
