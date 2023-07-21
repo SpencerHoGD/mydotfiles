@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/.local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/go/bin:$PATH
 export PATH=$HOME/Scripts:$PATH
 
 # # Get the aliases and functions
@@ -88,6 +89,7 @@ export RANGER_LOAD_DEFAULT_RC=false
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+alias ls='ls --color=auto'
 alias S='source ~/.zshrc'
 alias ra='ranger'
 alias sra='_ ranger'
@@ -104,6 +106,8 @@ alias c='clear'
 alias a='~'
 alias e='exit'
 alias today='date +"%A, %B %-d, %Y"'
+alias swp='ls ~/repo/nvim-theniceboy/tmp/*.swp'
+
 
 alias pau='sudo pacman -Syyu'
 alias pac='sudo pacman'
@@ -124,6 +128,8 @@ alias syse='sudo systemctl enable'
 alias sysd='sudo systemctl disable'
 
 alias pipi='python -m pip install'
+alias py='python'
+
 
 # docker
 alias dk='sudo docker'
@@ -164,7 +170,8 @@ alias clm='my_cloud --cloud hxm@192.168.1.11'
 # go env
 export GO111MODULE=on
 export GOPROXY=https://goproxy.cn
-export GOBIN=/usr/local/go/bin
+export GOPATH=$HOME/go
+export GOBIN=$HOME/go/bin
 export GOTMPDIR=$HOME/tmp
 
 ## xz
@@ -198,10 +205,10 @@ export LFS=/mnt/lfs
 ##-> DreymaR's SetXKB.sh: Activate layout setxkbmap -model 'pc104aw-zqu' -layout 'us(cmk_ed_us)' -option 'misc:extend,lv5:caps_switch_lock,grp:shifts_toggle,compose:menu,misc:cmk_curl_dh'
 ##<- DreymaR's SetXKB.sh
 
-
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 export EDITOR=nvim
-
+export OPENAI_API_KEY=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
+export SERPAPI_API_KEY=639425efa8239ad2edc4fec72b5b44c15fcf464e0f0b34ece9af257b3c1c55e3
