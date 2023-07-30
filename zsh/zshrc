@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/.local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/go/bin:$PATH
 export PATH=$HOME/Scripts:$PATH
 
@@ -89,15 +90,15 @@ export RANGER_LOAD_DEFAULT_RC=false
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+# alias nvim='~/Downloads/nvim-linux64/bin/nvim'
 alias ls='ls --color=auto'
 alias S='source ~/.zshrc'
 alias ra='ranger'
 alias sra='_ ranger'
 alias lg='lazygit'
-alias neo='neofetch'
 alias v='nvim'
 alias sv='sudo nvim'
-alias neo='neofetch'
+alias neo='neofetch | lolcat'
 alias sudo='sudo '
 alias X='chmod +x'
 alias rc='nvim ~/.zshrc'
@@ -127,7 +128,7 @@ alias syso='sudo systemctl stop'
 alias syse='sudo systemctl enable'
 alias sysd='sudo systemctl disable'
 
-alias pipi='python -m pip install'
+alias pipi='pip install'
 alias py='python'
 
 
@@ -212,3 +213,4 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=nvim
 export OPENAI_API_KEY=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
 export SERPAPI_API_KEY=639425efa8239ad2edc4fec72b5b44c15fcf464e0f0b34ece9af257b3c1c55e3
+export GOOGLE_API_KEY=AIzaSyDn2Z67ZgzWGnmIUnBqNgUjv2Y8LZbknHA
