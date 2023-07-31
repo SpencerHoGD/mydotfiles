@@ -93,6 +93,7 @@ export RANGER_LOAD_DEFAULT_RC=false
 # alias nvim='~/Downloads/nvim-linux64/bin/nvim'
 alias ls='ls --color=auto'
 alias S='source ~/.zshrc'
+alias jo='joshuto'
 alias ra='ranger'
 alias sra='_ ranger'
 alias lg='lazygit'
