@@ -1,2 +1,4 @@
 # mydotfiles
 mydotfiles
+
+use yadm
