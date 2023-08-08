@@ -4,6 +4,7 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/go/bin:$PATH
 export PATH=$HOME/Scripts:$PATH
+export PATH=$HOME/repo/ueberzugpp/scripts/fifo:$PATH
 
 # # Get the aliases and functions
 # if [ -f ~/.aliases ]; then
@@ -93,7 +94,7 @@ export RANGER_LOAD_DEFAULT_RC=false
 # alias nvim='~/Downloads/nvim-linux64/bin/nvim'
 alias ls='ls --color=auto'
 alias S='source ~/.zshrc'
-alias jo='joshuto'
+alias jos='joshuto'
 alias ra='ranger'
 alias sra='_ ranger'
 alias lg='lazygit'
@@ -109,11 +110,13 @@ alias a='~'
 alias e='exit'
 alias today='date +"%A, %B %-d, %Y"'
 alias swp='ls ~/repo/nvim-theniceboy/tmp/*.swp'
+alias gire='cd ~/repo/ && git clone'
 
 
 alias pau='sudo pacman -Syyu'
 alias pac='sudo pacman'
 alias ins='sudo pacman -S'
+alias pas='sudo pacman -Ss'
 alias par='sudo pacman -R'
 alias paq='sudo pacman -Q'
 
@@ -149,9 +152,7 @@ alias dkrmi='sudo docker rmi'
 
 alias dkrm='sudo docker rm' # remove container
 # or dksto $(dkpq)  # delete all container
-
 alias dkvol='sudo docker volume'
-alias sttt='shutdown -h now'
 
 # docker compose
 alias dkc='sudo docker compose'
