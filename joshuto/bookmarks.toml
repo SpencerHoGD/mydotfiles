@@ -1,0 +1,7 @@
+bookmark = [
+  { key = "r", path = "/" },
+  { key = "e", path = "/etc" },
+  { key = "u", path = "/usr" },
+
+  { key = "h", path = "~/" },
+]
