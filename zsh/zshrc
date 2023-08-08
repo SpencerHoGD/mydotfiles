@@ -213,6 +213,3 @@ export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 export EDITOR=nvim
-export OPENAI_API_KEY=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
-export SERPAPI_API_KEY=639425efa8239ad2edc4fec72b5b44c15fcf464e0f0b34ece9af257b3c1c55e3
-export GOOGLE_API_KEY=AIzaSyDn2Z67ZgzWGnmIUnBqNgUjv2Y8LZbknHA
