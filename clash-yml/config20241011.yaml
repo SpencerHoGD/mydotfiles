@@ -57,110 +57,111 @@ dns:
       - +.googlesyndication.com
       - +.googletagmanager.com
       - +.googletagservices.com
-  # enhanced-mode: fake-ip
-  # fake-ip-filter:
-    # - '*.lan'
-    # - '*.localdomain'
-    # - '*.example'
-    # - '*.invalid'
-    # - '*.localhost'
-    # - '*.test'
-    # - '*.local'
-    # - '*.home.arpa'
-    # - time.*.com
-    # - time.*.gov
-    # - time.*.edu.cn
-    # - time.*.apple.com
-    # - time1.*.com
-    # - time2.*.com
-    # - time3.*.com
-    # - time4.*.com
-    # - time5.*.com
-    # - time6.*.com
-    # - time7.*.com
-    # - ntp.*.com
-    # - ntp1.*.com
-    # - ntp2.*.com
-    # - ntp3.*.com
-    # - ntp4.*.com
-    # - ntp5.*.com
-    # - ntp6.*.com
-    # - ntp7.*.com
-    # - '*.time.edu.cn'
-    # - '*.ntp.org.cn'
-    # - '+.pool.ntp.org'
-    # - time1.cloud.tencent.com
-    # - music.163.com
-    # - '*.music.163.com'
-    # - '*.126.net'
-    # - musicapi.taihe.com
-    # - music.taihe.com
-    # - songsearch.kugou.com
-    # - trackercdn.kugou.com
-    # - '*.kuwo.cn'
-    # - api-jooxtt.sanook.com
-    # - api.joox.com
-    # - joox.com
-    # - y.qq.com
-    # - '*.y.qq.com'
-    # - streamoc.music.tc.qq.com
-    # - mobileoc.music.tc.qq.com
-    # - isure.stream.qqmusic.qq.com
-    # - dl.stream.qqmusic.qq.com
-    # - aqqmusic.tc.qq.com
-    # - amobile.music.tc.qq.com
-    # - '*.xiami.com'
-    # - '*.music.migu.cn'
-    # - music.migu.cn
-    # - '+.msftconnecttest.com'
-    # - '+.msftncsi.com'
-    # - msftconnecttest.com
-    # - msftncsi.com
-    # - localhost.ptlogin2.qq.com
-    # - localhost.sec.qq.com
-    # - '+.srv.nintendo.net'
-    # - '+.stun.playstation.net'
-    # - xbox.*.microsoft.com
-    # - xnotify.xboxlive.com
-    # - '+.ipv6.microsoft.com'
-    # - '+.battlenet.com.cn'
-    # - '+.wotgame.cn'
-    # - '+.wggames.cn'
-    # - '+.wowsgame.cn'
-    # - '+.wargaming.net'
-    # - proxy.golang.org
-    # - stun.*.*
-    # - stun.*.*.*
-    # - '+.stun.*.*'
-    # - '+.stun.*.*.*'
-    # - '+.stun.*.*.*.*'
-    # - heartbeat.belkin.com
-    # - '*.linksys.com'
-    # - '*.linksyssmartwifi.com'
-    # - '*.router.asus.com'
-    # - mesu.apple.com
-    # - swscan.apple.com
-    # - swquery.apple.com
-    # - swdownload.apple.com
-    # - swcdn.apple.com
-    # - swdist.apple.com
-    # - lens.l.google.com
-    # - stun.l.google.com
-    # - '*.square-enix.com'
-    # - '*.finalfantasyxiv.com'
-    # - '*.ffxiv.com'
-    # - '*.ff14.sdo.com'
-    # - ff.dorado.sdo.com
-    # - '*.mcdn.bilivideo.cn'
-    # - '+.media.dssott.com'
-    # - '+.pvp.net'
+  enhanced-mode: fake-ip
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.example'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - '+.pool.ntp.org'
+    - time1.cloud.tencent.com
+    - music.163.com
+    - '*.music.163.com'
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - '*.y.qq.com'
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - '*.xiami.com'
+    - '*.music.migu.cn'
+    - music.migu.cn
+    - '+.msftconnecttest.com'
+    - '+.msftncsi.com'
+    - msftconnecttest.com
+    - msftncsi.com
+    - localhost.ptlogin2.qq.com
+    - localhost.sec.qq.com
+    - '+.srv.nintendo.net'
+    - '+.stun.playstation.net'
+    - xbox.*.microsoft.com
+    - xnotify.xboxlive.com
+    - '+.ipv6.microsoft.com'
+    - '+.battlenet.com.cn'
+    - '+.wotgame.cn'
+    - '+.wggames.cn'
+    - '+.wowsgame.cn'
+    - '+.wargaming.net'
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - '+.stun.*.*'
+    - '+.stun.*.*.*'
+    - '+.stun.*.*.*.*'
+    - heartbeat.belkin.com
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - '*.router.asus.com'
+    - mesu.apple.com
+    - swscan.apple.com
+    - swquery.apple.com
+    - swdownload.apple.com
+    - swcdn.apple.com
+    - swdist.apple.com
+    - lens.l.google.com
+    - stun.l.google.com
+    - '*.square-enix.com'
+    - '*.finalfantasyxiv.com'
+    - '*.ffxiv.com'
+    - '*.ff14.sdo.com'
+    - ff.dorado.sdo.com
+    - '*.mcdn.bilivideo.cn'
+    - '+.media.dssott.com'
+    - '+.pvp.net'
 proxies:
+  # - {name: us-la, server: 66.225.228.161, port: 443, client-fingerprint: randomized, type: vmess, uuid: 08b8e71b-09fb-4930-b6b5-a7b8c903c3d0, alterId: 0, cipher: auto, tls: true, tfo: false, skip-cert-verify: false, network: ws, ws-opts: {path: /08b8e71b, headers: {Host: me.liamho.top}}}
   - name: 'us-la'
     server: 66.225.228.161
     port: 443
-    client-fingerprint: chrome
+    client-fingerprint: randomized
     type: vmess
-    uuid: 69fb6354-5503-48ed-9029-a01f1b0378b7
+    uuid: 08b8e71b-09fb-4930-b6b5-a7b8c903c3d0
     alterId: 0
     cipher: auto
     skip-cert-verify: false
@@ -168,7 +169,7 @@ proxies:
     tfo: false
     network: ws
     ws-opts:
-      path: /HHQFLvbJOgMPBnl
+      path: /H08b8e71b
       headers:
         host: me.liamho.top
 proxy-groups:
