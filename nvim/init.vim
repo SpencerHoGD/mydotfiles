@@ -192,7 +192,7 @@ noremap <LEADER>sh :vsp ~/.zshrc<CR>
 
 " Open the env.zsh aliases.zsh file anytime
 " noremap <LEADER>env :vsp $HOME/.config/zsh/env.zsh<CR>
-" noremap <LEADER>ali :vsp $HOME/.config/zsh/aliases.zsh<CR>
+noremap <LEADER>ali :vsp $ZSH_CUSTOM/aliases.zsh<CR>
 
 " Open myfilelist anytime
 noremap <LEADER>fl :tabedit $HOME/.config/nvim/myfilelist.md<CR>
