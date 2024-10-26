@@ -15,8 +15,8 @@
 " ===
 " === Auto load for first time uses
 " ===
-if empty(glob('/home/sp/.config/nvim/autoload/plug.vim'))
-	silent !curl -fLo /home/sp/.config/nvim/autoload/plug.vim --create-dirs
+if empty(glob('$HOME/.config/nvim/autoload/plug.vim'))
+	silent !curl -fLo $HOME/.config/nvim/autoload/plug.vim --create-dirs
 				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
@@ -26,16 +26,16 @@ endif
 " === Create a _machine_specific.vim file to adjust machine specific stuff, like python interpreter location
 " ===
 let has_machine_specific_file = 1
-if empty(glob('/home/sp/.config/nvim/_machine_specific.vim'))
+if empty(glob('$HOME/.config/nvim/_machine_specific.vim'))
 	let has_machine_specific_file = 0
-	silent! exec "!cp /home/sp/.config/nvim/default_configs/_machine_specific_default.vim /home/sp/.config/nvim/_machine_specific.vim"
+	silent! exec "!cp $HOME/.config/nvim/default_configs/_machine_specific_default.vim $HOME/.config/nvim/_machine_specific.vim"
 endif
-source /home/sp/.config/nvim/_machine_specific.vim
+source $HOME/.config/nvim/_machine_specific.vim
 
 
 " Open the _machine_specific.vim file if it has just been created
 if has_machine_specific_file == 0
-	exec "e /home/sp/.config/nvim/_machine_specific.vim"
+	exec "e $HOME/.config/nvim/_machine_specific.vim"
 endif
 
 
@@ -95,14 +95,14 @@ set nowrapscan    "This stops the search at the end of the file.
 "set spell spelllang=en_us
 set nospell
 
-silent !mkdir -p /home/sp/.config/nvim/tmp/backup
-silent !mkdir -p /home/sp/.config/nvim/tmp/undo
-"silent !mkdir -p /home/sp/.config/nvim/tmp/sessions
-set backupdir=/home/sp/.config/nvim/tmp/backup,.
-set directory=/home/sp/.config/nvim/tmp/backup,.
+silent !mkdir -p $HOME/.config/nvim/tmp/backup
+silent !mkdir -p $HOME/.config/nvim/tmp/undo
+"silent !mkdir -p $HOME/.config/nvim/tmp/sessions
+set backupdir=$HOME/.config/nvim/tmp/backup,.
+set directory=$HOME/.config/nvim/tmp/backup,.
 if has('persistent_undo')
 	set undofile
-	set undodir=/home/sp/.config/nvim/tmp/undo,.
+	set undodir=$HOME/.config/nvim/tmp/undo,.
 endif
 
 " set shada='1000,f1,<500
@@ -177,30 +177,30 @@ let mapleader=" "
 
 " Save & quit
 noremap S :w<CR>
-noremap R :source /home/sp/.config/nvim/init.vim<CR>
+noremap R :source $HOME/.config/nvim/init.vim<CR>
 noremap Q :q<CR>
 " noremap <LEADER>sa :w<CR>
 " noremap <LEADER>qu :q<CR>
 noremap <C-q> :qa<CR>
 
 " Open the vimrc file anytime
-noremap <LEADER>rc :vsp /home/sp/.config/nvim/init.vim<CR>
+noremap <LEADER>rc :vsp $HOME/.config/nvim/init.vim<CR>
 "noremap <LEADER>rc :vsp $MYVIMRC<CR>
 
 " Open the .zshrc file anytime
 noremap <LEADER>sh :vsp ~/.zshrc<CR>
 
 " Open the env.zsh aliases.zsh file anytime
-noremap <LEADER>env :vsp /home/sp/.config/zsh/env.zsh<CR>
-noremap <LEADER>ali :vsp /home/sp/.config/zsh/aliases.zsh<CR>
+noremap <LEADER>env :vsp $HOME/.config/zsh/env.zsh<CR>
+noremap <LEADER>ali :vsp $HOME/.config/zsh/aliases.zsh<CR>
 
 " Open myfilelist anytime
-noremap <LEADER>fl :tabedit /home/sp/.config/nvim/myfilelist.md<CR>
+noremap <LEADER>fl :tabedit $HOME/.config/nvim/myfilelist.md<CR>
 " Inline open (goto) file
 "noremap <LEADER>op 0f/gf
 
 " Open md-snippets anytime
-noremap <LEADER>md :vsp /home/sp/.config/nvim/md-snippets.vim<CR>
+noremap <LEADER>md :vsp $HOME/.config/nvim/md-snippets.vim<CR>
 
 
 " (){}
@@ -322,7 +322,7 @@ noremap tml :+tabmove<CR>
 " === Markdown Settings
 " ===
 " Snippets
-" source /home/sp/.config/nvim/md-snippets.vim
+" source $HOME/.config/nvim/md-snippets.vim
 " auto spell
 " autocmd BufRead,BufNewFile *.md setlocal spell
 
@@ -432,7 +432,7 @@ noremap t :call CompileRunGcc()<CR>
 " === Install Plugins with Vim-Plug
 " ===
 
-call plug#begin('/home/sp/.config/nvim/plugged')
+call plug#begin('$HOME/.config/nvim/plugged')
 
 
 " Translation
@@ -1252,10 +1252,10 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 " let g:vimspector_enable_mappings = 'HUMAN'
 " function! s:read_template_into_buffer(template)
 " 	" has to be a function to avoid the extra space fzf#run insers otherwise
-" 	execute '0r /home/sp/.config/nvim/sample_vimspector_json/'.a:template
+" 	execute '0r $HOME/.config/nvim/sample_vimspector_json/'.a:template
 " endfunction
 " command! -bang -nargs=* LoadVimSpectorJsonTemplate call fzf#run({
-" 			\   'source': 'ls -1 /home/sp/.config/nvim/sample_vimspector_json',
+" 			\   'source': 'ls -1 $HOME/.config/nvim/sample_vimspector_json',
 " 			\   'down': 20,
 " 			\   'sink': function('<sid>read_template_into_buffer')
 " 			\ })
