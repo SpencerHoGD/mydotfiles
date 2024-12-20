@@ -17,6 +17,7 @@ iner:~/pyproject/open-interpreter
 joc:~/.config/joshuto
 jo:~/github/joshuto
 jos:~/.config/nvim/lua/josean
+ldd:/usr/lib/modules/6.12.4-arch1-1/build/Documentation
 ld:/usr/src/linux/Documentation
 masonp:~/.local/share/nvim/mason/packages
 n:~/.config/nvim
