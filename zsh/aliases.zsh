@@ -1,4 +1,4 @@
-alias tun='nvim ~/sing-box-data/tun.json'
+alias tun='cd ~/sing-box-data/ && nvim tun.json'
 alias ch='chromium'
 alias vv='source $HOME/venv/bin/activate'
 alias dv='deactivate'
