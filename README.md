@@ -1,4 +1,5 @@
-# mydotfiles
-mydotfiles
+```sh
+bash ~/dotfiles/dotfiles-symlink.sh
+```
 
-use yadm
+use yadm?
