@@ -132,21 +132,6 @@ export ARCHFLAGS="-arch $(uname -m)"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# man $1 | grep -e '$2'
-manp() {
-    if [[ -n $1 && -n $2 ]]; then
-        # Use command substitution to run the commands and capture the output
-        local result=$(man $1 | grep -e $2)
-        if [[ -n $result ]]; then
-            echo "$result"
-        else
-            echo "No matching content found in the man page for '$1' related to '$2'."
-        fi
-    else
-        echo "Both an argument for the command name (man page) and the search term are required."
-    fi
-}
-
 # put the output of a command to text file and edit with nvim
 # Not worked
 # tov() {
@@ -169,6 +154,39 @@ manp() {
 #     fi
 # }
 
+# man $1 | grep -e '$2'
+manp() {
+    if [[ -n $1 && -n $2 ]]; then
+        # Use command substitution to run the commands and capture the output
+        local result=$(man $1 | grep -e $2)
+        if [[ -n $result ]]; then
+            echo "$result"
+        else
+            echo "No matching content found in the man page for '$1' related to '$2'."
+        fi
+    else
+        echo "Both an argument for the command name (man page) and the search term are required."
+    fi
+}
+
+# make alias in CLI
+mkals() {
+    if [[ -n $1 && -n ${@:2} ]]; then
+        # Use command substitution to run the commands and capture the output
+        local ali="$HOME/dotfiles/zsh/aliases.zsh"
+        local tmp="$HOME/dotfiles/zsh/tmp"
+        local result=$(echo "alias $1='${@:2}'")
+        if [[ -n $result ]]; then
+          # echo $result
+          echo "$result" | cat - $ali > $tmp && mv $tmp $ali
+        else
+            echo "echo for '$1' and the expretion '${@:2}' is not ok."
+        fi
+    else
+        echo "please provide alias name '$1' and the expretion '${@:2}'."
+    fi
+}
+
 # wd list grep
 wdp() {
     if [[ -n $1 ]]; then
@@ -178,7 +196,7 @@ wdp() {
     fi
 }
 
-# Help of command
+# --help for commands
 h() {
     if [[ -n $1 ]]; then
         $1 --help | less
@@ -209,12 +227,6 @@ repo () {
 shs () {
   zsh "$HOME/scripts/$1"
 }
-
-# make alias in CLI
-mkals () {
-  echo "alias $1='${@:2}'"
-}
-
 
 # docker completion
 zstyle ':completion:*:*:docker:*' option-stacking yes
