@@ -19,7 +19,7 @@ alias c='clear'
 alias v='nvim'
 alias nv='nvim'
 
-alias ba='nvim ~/dotfiles/zsh/aliases.zsh'
+alias ba='cd ~/dotfiles/ && nvim ./zsh/aliases.zsh'
 alias bb='source ~/.zshrc'
 alias be='exec zsh'
 
