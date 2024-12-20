@@ -1,0 +1,11 @@
+[user]
+	name = hxm
+	email = 125423559@qq.com
+[color]
+	ui = auto
+[core]
+	editor = nvim
+[checkout]
+	defaultRemote = origin
+[diff]
+	submodule = log
