@@ -1,3 +1,4 @@
+alias goo='function _goo(){ $BROWSER "https://translate.google.com/?sl=auto&tl=en&text=$1" --new-tab; }; _goo'
 alias sra='sudo ranger .'
 alias tun='cd ~/sing-box-data/ && nvim tun.json'
 alias ch='chromium'
