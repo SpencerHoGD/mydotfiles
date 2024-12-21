@@ -12,6 +12,8 @@ export RANGER_LOAD_DEFAULT_RC=FALSE
 export EDITOR=nvim
 export VISUAL=nvim
 
+export BROWSER=chromium
+
 export GO111MODULE=on
 export GOPROXY=https://goproxy.cn
 export UEBERZUGPP_TMPDIR="${TMPDIR}/ueberzugpp"
@@ -30,8 +32,6 @@ SAVEHIST=100000
 # export XDG_CONFIG_DIRS="/etc/xdg"
 # export XDG_CACHE_HOME="$HOME/.cache"
 
-
-export BROWSER=chromium
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -112,12 +112,12 @@ FZF_ALT_C_COMMAND= source <(fzf --zsh)
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
-else
-  export EDITOR='vim'
-fi
+# # Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='nvim'
+# else
+#   export EDITOR='nvim'
+# fi
 
 # Compilation flags
 export ARCHFLAGS="-arch $(uname -m)"
@@ -133,28 +133,6 @@ export ARCHFLAGS="-arch $(uname -m)"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# put the output of a command to text file and edit with nvim
-# Not worked
-# tov() {
-#     if [[ -n $1 ]]; then
-#         local result=$($1)
-#         local file_name=$(basename "$1")
-#         local file="$HOME/$file_name.txt"
-#         if [[ -n $result ]]; then
-#             echo "$result > $file"
-#             if [[ -n $file ]]; then
-#                 nvim $file
-#             else
-#                echo "No ouput text file for nvim"
-#             fi
-#         else
-#             echo "No stdout."
-#         fi
-#     else
-#         echo "Please provide a command as an argument."
-#     fi
-# }
 
 # man $1 | grep -e '$2'
 manp() {
@@ -207,7 +185,7 @@ h() {
     fi
 }
 
-# # use als for alias | grep something
+# # als instead alias | grep something
 
 # pacman installed translate-shell and the command is trans. But the network is not ok.
 tr() {
