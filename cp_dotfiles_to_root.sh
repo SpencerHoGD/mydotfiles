@@ -79,4 +79,5 @@ else
   echo "Symlinked $ROOT_DOT_DIR/zsh/$ali to $ROOT_ZSH_CUS/$ali"
 fi
 
+ln -s /root/dotfiles/zsh/aliases.zsh /root/.oh-my-zsh/custom
 
