@@ -6,6 +6,9 @@ SRC_DOT_DIR="/home/hxm/dotfiles"
 
 ROOT_DOT_DIR="/root/dotfiles"
 
+TIMESTAMP=$(date +'%d%m%y%H%M%S')
+# BACKUP_FILE="${SOURCE_FILE}.${TIMESTAMP}"
+
 ROOT_BAK_DIR="/root/dotfiles_backup"
 
 ROOT_ZSH_CUS="/root/.oh-my-zsh/custom"
@@ -26,7 +29,7 @@ fi
 # Check and sudo move $ROOT_DOT_DIR to BACKUP_DIR
 if [ -d $ROOT_DOT_DIR ]; then
   echo "moved $ROOT_DOT_DIR to $ROOT_BAK_DIR"
-  sudo mv "$ROOT_DOT_DIR" "$ROOT_BAK_DIR"
+  sudo mv "$ROOT_DOT_DIR" "${ROOT_BAK_DIR}.${TIMESTAMP}"
   echo $LINE
 fi
 
@@ -55,7 +58,7 @@ declare -a FILES_TO_SYMLINK=(
 for file in "${FILES_TO_SYMLINK[@]}"; do
   if [ -e "/root/.$file" ]; then
     # Backup existing file if it exists
-    sudo mv "/root/.$file" "$ROOT_BAK_DIR/$file"
+    sudo mv "/root/.$file" "$ROOT_BAK_DIR/${file}.${TIMESTAMP}"
     echo "moved /root/.$file to $ROOT_BAK_DIR/$file"
   fi
   
@@ -67,7 +70,7 @@ done
 local ali="aliases.zsh"
 # Create symlink for aliases.zsh
 if [ -e "$ROOT_ZSH_CUS/$ali" ]; then
-  sudo mv "$ROOT_ZSH_CUS/$ali" "$ROOT_BAK_DIR/$ali"
+  sudo mv "$ROOT_ZSH_CUS/$ali" "$ROOT_BAK_DIR/${ali}.${TIMESTAMP}"
   echo "Backuped aliases.zsh"
   echo $LINE
 else
