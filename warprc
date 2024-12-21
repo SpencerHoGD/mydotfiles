@@ -23,6 +23,7 @@ ld:/usr/src/linux/Documentation
 masonp:~/.local/share/nvim/mason/packages
 n:~/.config/nvim
 ng:/etc/nginx
+nhxm:~/.config/nvim/lua/hxm
 np:~/.config/nvim/lua/josean/plugins
 obs:~/obsidian_note
 pyo:~/python_proj/old_study_python
@@ -42,6 +43,7 @@ st:~/suckless/st
 uf:~/.config/fontconfig/conf.d
 vid:~/video
 vp:~/vidp
+v:~/video
 wall:~/.wallpapers
 x:/usr/share/X11/xorg.conf.d
 yj:~/video/yijing
