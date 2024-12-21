@@ -28,8 +28,9 @@ fi
 
 # Check and sudo move $ROOT_DOT_DIR to BACKUP_DIR
 if [ -d $ROOT_DOT_DIR ]; then
-  echo "moved $ROOT_DOT_DIR to $ROOT_BAK_DIR"
-  sudo mv "$ROOT_DOT_DIR" "${ROOT_BAK_DIR}.${TIMESTAMP}"
+  sudo rm -rf "$ROOT_BAK_DIR/dotfiles"
+  echo "Old $ROOT_BAK_DIR/dotfiles dir has been removed"
+  sudo mv "$ROOT_DOT_DIR" "$ROOT_BAK_DIR"
   echo $LINE
 fi
 
@@ -67,7 +68,7 @@ for file in "${FILES_TO_SYMLINK[@]}"; do
   echo "Symlinked $file to /root/.$file"
 done
 
-local ali="aliases.zsh"
+ali="aliases.zsh"
 # Create symlink for aliases.zsh
 if [ -e "$ROOT_ZSH_CUS/$ali" ]; then
   sudo mv "$ROOT_ZSH_CUS/$ali" "$ROOT_BAK_DIR/${ali}.${TIMESTAMP}"
