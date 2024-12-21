@@ -13,6 +13,7 @@ fonts:/usr/share/fonts
 g:~/github
 git:~/github
 han:~/github/unihan-database
+html:/usr/share/nginx/html
 iner:~/pyproject/open-interpreter
 joc:~/.config/joshuto
 jo:~/github/joshuto
@@ -21,6 +22,7 @@ ldd:/usr/lib/modules/6.12.4-arch1-1/build/Documentation
 ld:/usr/src/linux/Documentation
 masonp:~/.local/share/nvim/mason/packages
 n:~/.config/nvim
+ng:/etc/nginx
 np:~/.config/nvim/lua/josean/plugins
 obs:~/obsidian_note
 pyo:~/python_proj/old_study_python
