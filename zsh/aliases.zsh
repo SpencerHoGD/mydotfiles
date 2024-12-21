@@ -1,4 +1,4 @@
-alias sra='sudo ranger'
+alias sra='sudo ranger .'
 alias tun='cd ~/sing-box-data/ && nvim tun.json'
 alias ch='chromium'
 alias vv='source $HOME/venv/bin/activate'
