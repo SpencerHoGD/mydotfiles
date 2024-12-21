@@ -6,22 +6,21 @@ DOTFILE_DIR="/home/hxm/dotfiles"
 
 ZSRC="/home/hxm/dotfiles/zsh/"
 ALI_F="aliases.zsh"
+# root dir
 ZDES="$HOME/.oh-my-zsh/custom/"
-
 BACKUP_DIR="$HOME/dotfiles_backup"
 # REPO="https://github.com/SpencerHoGD/mydotfiles"
 LINE="======================="
 
 
-# if [ -d $DOTFILE_DIR ]; then
-#   echo "$DOTFILE_DIR exists no need to git clone"
-#   echo $LINE
-# else
-#   echo "$DOTFILE_DIR not exists"
-#   echo "git cloneing from $REPO"
-#   git clone $REPO $DOTFILE_DIR
-#   echo $LINE
-# fi
+if [ -d $DOTFILE_DIR ]; then
+  echo "$DOTFILE_DIR exists"
+  echo $LINE
+else
+  echo "$DOTFILE_DIR not exists"
+  echo $LINE
+  exit
+fi
 
 # Create backup directory
 if [ -d $BACKUP_DIR ]; then
@@ -58,7 +57,7 @@ for file in "${FILES_TO_SYMLINK[@]}"; do
     echo "copyed $DOTFILE_DIR/$file" to "$HOME/.$file"
 done
 
-# zsh/aliases.zsh
+# move exists aliases.zsh to BACKUP_DIR
 if [ -e "$ZDES/$ALI_F" ]; then
   mv "$ZDES/$ALI_F" "$BACKUP_DIR/$ALI_F"
   echo "moved $ZDES/$ALI_F to $BACKUP_DIR/$ALI_F"
@@ -66,6 +65,7 @@ else
   echo "$ZDES/$ALI_F not exists"
 fi
 
+# copy aliases.zsh from src to root
 if [ -e "$ZSRC/$ALI_F" ]; then
   cp "$ZSRC/$ALI_F" "$ZDES/$ALI_F"
   echo "copyed $ZSRC/$ALI_F to $ZDES/$ALI_F"
