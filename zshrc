@@ -16,6 +16,8 @@ export GO111MODULE=on
 export GOPROXY=https://goproxy.cn
 export UEBERZUGPP_TMPDIR="${TMPDIR}/ueberzugpp"
 
+export GITPROXY=https://ghgo.xyz
+
 HISTSIZE=100000
 SAVEHIST=100000
 
