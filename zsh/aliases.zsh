@@ -16,6 +16,7 @@ alias la='ssh la'
 # https://github.com/kamiyaa/joshuto/blob/main/docs/image_previews/ueberzug.md
 alias jo='joshuto'
 alias ra='ranger'
+alias f='yazi'
 alias e='exit'
 alias c='clear'
 alias v='nvim'
