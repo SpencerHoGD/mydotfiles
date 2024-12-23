@@ -225,8 +225,8 @@ if [ -d "$FNM_PATH" ]; then
 fi
 export PATH=$PATH:/usr/local/bin
 
-# yazi
-function y() {
+# f instead of y for yazi because f is more reachable.
+function f() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
 	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
