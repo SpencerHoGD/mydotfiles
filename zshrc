@@ -237,6 +237,3 @@ function f() {
 
 eval "$(zoxide init zsh)"
 
-# alacritty
-fpath+=${ZDOTDIR:-~}/.zsh_functions
-
