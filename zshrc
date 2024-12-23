@@ -7,6 +7,7 @@ export PATH="$HOME/scripts:$PATH"
 export PATH="$HOME/pyproject/open-interpreter/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 export RANGER_LOAD_DEFAULT_RC=FALSE
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # also set in /etc/environment
 export EDITOR=nvim
