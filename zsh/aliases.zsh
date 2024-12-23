@@ -1,4 +1,4 @@
-alias cheat='~/cheatsheet.md'
+alias cheat='nvim ~/obsidian_note/cheat-sheet.md'
 alias vm='nvim ~/.oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh'
 alias goo='function _goo(){ $BROWSER "https://translate.google.com/?sl=auto&tl=en&text=$1" --new-tab; }; _goo'
 alias sra='sudo ranger .'
