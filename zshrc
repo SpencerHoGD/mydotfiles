@@ -214,6 +214,7 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 
 bindkey -v
+bindkey -M viins 'jk' vi-cmd-mode
 
 
 # fnm
