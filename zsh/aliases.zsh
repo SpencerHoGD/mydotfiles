@@ -1,3 +1,5 @@
+alias cheat='~/cheatsheet.md'
+alias vm='nvim ~/.oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh'
 alias goo='function _goo(){ $BROWSER "https://translate.google.com/?sl=auto&tl=en&text=$1" --new-tab; }; _goo'
 alias sra='sudo ranger .'
 alias tun='cd ~/sing-box-data/ && nvim tun.json'
@@ -16,7 +18,6 @@ alias la='ssh la'
 # https://github.com/kamiyaa/joshuto/blob/main/docs/image_previews/ueberzug.md
 alias jo='joshuto'
 alias ra='ranger'
-alias f='y'
 alias e='exit'
 alias c='clear'
 alias v='nvim'
@@ -77,7 +78,8 @@ alias yte='yt-dlp --embed-subs'
 
 
 alias rbbb='systemctl reboot'
-alias sttt='systemctl poweroff'
+# alias sttt='systemctl poweroff'
+alias sttt='sudo shutdown -h now'
 
 alias X='chmod +x'
 
