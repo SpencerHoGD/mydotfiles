@@ -26,8 +26,10 @@ iner:~/pyproject/open-interpreter
 jo:~/github/joshuto
 ldd:/usr/lib/modules/6.12.4-arch1-1/build/Documentation
 ld:/usr/src/linux/Documentation
+los:~/.local/share
 masonp:~/.local/share/nvim/mason/packages
 ng:/etc/nginx
+obs:~/obsidian_note
 o:~/obsidian_note
 pyo:~/python_proj/old_study_python
 py:~/python_proj
