@@ -4,7 +4,6 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$HOME/scripts:$PATH"
-export PATH="$HOME/pyproject/open-interpreter/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 export RANGER_LOAD_DEFAULT_RC=FALSE
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -16,10 +15,6 @@ export VISUAL=nvim
 export BROWSER=chromium
 
 export GO111MODULE=on
-export GOPROXY=https://goproxy.cn
-export UEBERZUGPP_TMPDIR="${TMPDIR}/ueberzugpp"
-
-export GITPROXY=https://ghgo.xyz
 
 HISTSIZE=100000
 SAVEHIST=100000
@@ -103,8 +98,8 @@ HIST_STAMPS="mm/dd/yyyy"
 plugins=(git wd aliases docker themes vi-mode)
 
 source $ZSH/oh-my-zsh.sh
-source <(fzf --zsh)
-FZF_ALT_C_COMMAND= source <(fzf --zsh)
+# source <(fzf --zsh)
+# FZF_ALT_C_COMMAND= source <(fzf --zsh)
 
 # User configuration
 

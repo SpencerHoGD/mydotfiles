@@ -31,11 +31,9 @@ fi
 
 # List of dotfiles to symlink
 declare -a FILES_TO_SYMLINK=(
-    'gitconfig'
+    # 'gitconfig'
     'vimrc'
     'warprc'
-    'xinitrc'
-    'Xresources'
     'zshrc'
     # Add other files here
 )
