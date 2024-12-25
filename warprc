@@ -8,7 +8,7 @@ cfc:~/.config/fontconfig/conf.d
 cjo:~/.config/joshuto
 cn:~/.config/nvim
 cnh:~/.config/nvim/lua/hxm
-cnjp:~/.config/nvim/lua/josean/plugins
+cnp:~/.config/nvim/lua/hxm/plugins
 cr:~/.config/ranger
 csb:~/.config/sing-box
 csbd:~/.config/sing-box/config.d
