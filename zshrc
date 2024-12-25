@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -8,6 +8,7 @@ export PATH="$HOME/pyproject/open-interpreter/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 export RANGER_LOAD_DEFAULT_RC=FALSE
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/go/bin/:$PATH"
 
 # also set in /etc/environment
 export EDITOR=nvim
@@ -15,14 +16,17 @@ export VISUAL=nvim
 
 export BROWSER=chromium
 
-export GO111MODULE=on
-export GOPROXY=https://goproxy.cn
-export UEBERZUGPP_TMPDIR="${TMPDIR}/ueberzugpp"
+# export GO111MODULE=on
+# export GOPROXY=https://goproxy.cn
+# export UEBERZUGPP_TMPDIR="${TMPDIR}/ueberzugpp"
 
 export GITPROXY=https://ghgo.xyz
 
 HISTSIZE=100000
 SAVEHIST=100000
+
+# archlinuxcn https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/
+export DEBUGINFOD_URLS="https://debuginfod.archlinux.org https://repo.archlinuxcn.org"
 
 # https://specifications.freedesktop.org/basedir-spec/latest/
 # below setting is just for me to review
