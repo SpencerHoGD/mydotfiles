@@ -47,7 +47,7 @@ for file in "${FILES_TO_SYMLINK[@]}"; do
         echo "moved $HOME/.$file to $BACKUP_DIR/$file"
     fi
     
-    # Create symlink
-    ln -s "$DOTFILE_DIR/$file" "$HOME/.$file"
-    echo "Symlinked $file to $HOME/.$file"
+    # copy dotfiles to $HOME
+    cp "$DOTFILE_DIR/$file" "$HOME/.$file"
+    echo "Copyed $file to $HOME/.$file"
 done
