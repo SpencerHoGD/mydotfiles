@@ -31,7 +31,10 @@ fi
 
 # List of dotfiles to symlink
 declare -a FILES_TO_SYMLINK=(
+<<<<<<< HEAD
     # 'gitconfig'
+=======
+>>>>>>> 3ac00d04f91353324dfe49bee129b89096904813
     'vimrc'
     'warprc'
     'zshrc'

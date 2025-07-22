@@ -18,8 +18,10 @@ dl:~/Downloads
 dot:~/dotfiles
 feh:~/.fehbg
 fonts:/usr/share/fonts
+gacn:~/github/archlinuxcn
 g:~/github
 git:~/github
+go:~/go
 han:~/github/unihan-database
 html:/usr/share/nginx/html
 iner:~/pyproject/open-interpreter
