@@ -15,15 +15,12 @@ export VISUAL=nvim
 
 export BROWSER=chromium
 
-<<<<<<< HEAD
 export GO111MODULE=on
-=======
 # export GO111MODULE=on
 # export GOPROXY=https://goproxy.cn
 # export UEBERZUGPP_TMPDIR="${TMPDIR}/ueberzugpp"
 
 export GITPROXY=https://ghgo.xyz
->>>>>>> 3ac00d04f91353324dfe49bee129b89096904813
 
 HISTSIZE=100000
 SAVEHIST=100000
