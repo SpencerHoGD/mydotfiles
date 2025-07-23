@@ -243,4 +243,6 @@ function f() {
 eval "$(zoxide init zsh)"
 
 
+
+
 . "/root/.acme.sh/acme.sh.env"
