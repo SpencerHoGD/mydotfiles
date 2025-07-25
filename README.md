@@ -21,3 +21,5 @@ without .(dot)
 ```
 
 use yadm?
+
+now use chezmoi
