@@ -1,9 +1,0 @@
-[Unit]
-Description=Clash Daemon
-
-[Service]
-ExecStart=/usr/bin/clash -d /etc/clash/
-Restart=on-failure
-
-[Install]
-WantedBy=multi-user.target
